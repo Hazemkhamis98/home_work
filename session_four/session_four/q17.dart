@@ -6,8 +6,10 @@ toString, padLeft, and length to format and compare the results.
 
 void main() {
   double price = 90;
+  String currency = 'Egy';
   var priceTag = '\$' + price.toString();
-  print(priceTag);
+  // print(priceTag);
+  print(price.toString().padLeft(5, currency));
   print(priceTag.padLeft(10));
   print(priceTag.length);
 }

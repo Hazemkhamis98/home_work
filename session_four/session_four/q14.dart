@@ -7,7 +7,9 @@ greater than or equal to 40.
  */
 
 void main() {
-  List<int?> scores = [];
+  List<int>? scores = [];
+  // الليست السابقة تعني ان الليست نفسها ممكن تكون null مش الارقام الداخلية
+  // List<int?> scores = [];
   if (scores == null || scores.isEmpty) {
     print('No Scores');
   }

@@ -17,6 +17,7 @@ void main() {
   }
   print(env);
   print(env.values?.toString().toUpperCase());
+  print(env.values?.toList().toString().replaceAll('[', '').replaceAll(']', '').toUpperCase());
 
   if (env['MODE'] == 'prod') {
     print('Prod ready');

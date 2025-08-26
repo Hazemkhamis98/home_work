@@ -12,16 +12,16 @@ void main() {
     'User6': 29,
   };
   bool heHasDad;
-  heHasDad = false;
+  heHasDad = true;
   String? area;
   area = 'restricted';
 
-    if (tickets['User4']! < 18 && !heHasDad) {
+    if (tickets['User4']! < 18 && heHasDad) {
     print('Access denied (under 18, no parent)');
-    return; // نوقف البرنامج
-  }
+    return;
+    }
   
-    switch (area!) {
+    switch (area) {
       case 'general':
         print('Welcome to general area');
         break;

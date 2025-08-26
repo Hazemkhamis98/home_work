@@ -25,11 +25,12 @@ void main() {
     'Age': 27,
     'Phone': null,
   };
-  if (personalDetail['Phone'] == null) {
+  String? phoneNumber = personalDetail['phone'];
+  if (phoneNumber == null) {
     print('Please enter your phone number');
+    phoneNumber = '012345';
+    print(phoneNumber);
+    phoneNumber = phoneNumber.toString();
+    print(phoneNumber.length);
   }
-  personalDetail['Phone'] = 012345;
-  print(personalDetail['Phone']);
-  personalDetail['Phone'] = personalDetail['Phone'].toString();
-  print(personalDetail['Phone'].length);
 }
