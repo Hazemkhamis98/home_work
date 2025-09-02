@@ -18,4 +18,9 @@ void main() {
   if (!countryCodes.containsKey('JO')) {
     print('Jordan missing');
   }
+
+  List<int>? numbers = null;
+  if (numbers?.isEmpty?? true ){
+    
+  }
 }
