@@ -10,18 +10,21 @@ void main() {
   print(isPalindrome(y));
 }
 
+// bool isPalindrome(String s) {
+//   s = s.replaceAll(RegExp(r'[^a-zA-Z0-9]'), '').toLowerCase();
+//   List<String> sToList = s.split('');
+//   List<String> sReversedList = sToList.reversed.toList();
+//   bool isPalindrome =sToList == sReversedList ;
+//   for (var i = 0; i < sToList.length; i++) {
+//     if (sToList[i] != sReversedList[i]) {
+//       isPalindrome = false;
+//       break;
+//     }
+//   }
+//   return isPalindrome;
+// }
+
 bool isPalindrome(String s) {
-  s = s.toLowerCase();
-  s = s.replaceAll(RegExp(r'[^a-zA-Z0-9 ]'), '');
-  s = s.replaceAll(" ", '');
-  List<String> sToList = s.split('');
-  List<String> sReversedList = sToList.reversed.toList();
-  bool isPalindrome = true;
-  for (var i = 0; i < sToList.length; i++) {
-    if (sToList[i] != sReversedList[i]) {
-      isPalindrome = false;
-      break;
-    }
-  }
-  return isPalindrome;
+  s = s.replaceAll(RegExp(r'[^a-zA-Z0-9]'), '').toLowerCase();
+  return s == s.split('').reversed.join('');
 }
