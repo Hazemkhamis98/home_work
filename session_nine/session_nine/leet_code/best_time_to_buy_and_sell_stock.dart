@@ -7,8 +7,6 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
  */
 
 void main() {
-  List<int> prices = [2, 4, 1];
-  print('${maxProfit(prices)}');
 }
 
 int maxProfit(List<int> prices) {
